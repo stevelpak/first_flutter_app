@@ -38,7 +38,7 @@ class _MyWidgetState extends State<MyWidget> {
       backgroundColor: const Color.fromARGB(255, 6, 214, 160),
       appBar: AppBar(
         title: const Center(
-          child: Text("Counter"),
+          child: Text("Counter (made by Steve)"),
         ),
       ),
       body: Center(
@@ -53,8 +53,8 @@ class _MyWidgetState extends State<MyWidget> {
             ),
             Container(
               alignment: Alignment.center,
-              width: 150,
-              padding: const EdgeInsets.all(5),
+              width: 170,
+              padding: const EdgeInsets.all(3),
               margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
