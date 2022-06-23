@@ -51,34 +51,44 @@ class _MyWidgetState extends State<MyWidget> {
                 fontSize: 20,
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MaterialButton(
-                  color: const Color.fromARGB(255, 22, 91, 170),
-                  onPressed: (() => setState(() {
-                        _count--;
-                      })),
-                  child: const Icon(Icons.remove),
-                ),
-                MaterialButton(
-                  color: const Color.fromARGB(255, 22, 91, 170),
-                  onPressed: (() {}),
-                  child: Text(
-                    "$_count",
-                    style: const TextStyle(
-                      fontSize: 18,
+            Container(
+              alignment: Alignment.center,
+              width: 150,
+              padding: const EdgeInsets.all(5),
+              margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.indigo,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MaterialButton(
+                    minWidth: 50,
+                    onPressed: (() => setState(() {
+                          _count--;
+                        })),
+                    child: const Icon(Icons.remove),
+                  ),
+                  MaterialButton(
+                    minWidth: 50,
+                    onPressed: (() {}),
+                    child: Text(
+                      "$_count",
+                      style: const TextStyle(
+                        fontSize: 18,
+                      ),
                     ),
                   ),
-                ),
-                MaterialButton(
-                  color: const Color.fromARGB(255, 22, 91, 170),
-                  onPressed: (() => setState(() {
-                        _count++;
-                      })),
-                  child: const Icon(Icons.add),
-                )
-              ],
+                  MaterialButton(
+                    minWidth: 50,
+                    onPressed: (() => setState(() {
+                          _count++;
+                        })),
+                    child: const Icon(Icons.add),
+                  )
+                ],
+              ),
             ),
             const Text(
               "Tap '+' to increment",
