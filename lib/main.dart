@@ -55,34 +55,33 @@ class _MyWidgetState extends State<MyWidget> {
               ),
             ),
             Container(
-              alignment: Alignment.center,
-              width: 150,
               padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(25),
                 color: Colors.indigo,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  MaterialButton(
-                    minWidth: 50,
+                  IconButton(
                     onPressed: (() => setState(() {
-                          _count--;
+                          if (_count > 0) {
+                            _count--;
+                          }
                         })),
-                    child: const Icon(Icons.remove),
+                    icon: const Icon(Icons.remove),
                   ),
                   Text(
                     "$_count",
                     style: const TextStyle(fontSize: 18),
                   ),
-                  MaterialButton(
-                    minWidth: 50,
+                  IconButton(
                     onPressed: (() => setState(() {
                           _count++;
                         })),
-                    child: const Icon(Icons.add),
+                    icon: const Icon(Icons.add),
                   )
                 ],
               ),
